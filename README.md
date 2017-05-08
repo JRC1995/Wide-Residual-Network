@@ -18,7 +18,7 @@ But there are various factors that may contribute to the low accuracy:
 5) No L2 regularization
 6) Certain hyperparameters might need to be further optimized. (I don't have too much experience in working with machine learning)
 
-File descriptions:
+# File descriptions:
 
 **DataProcessing.ipynb:** This consists of the code for performing some basic preprocessing on the cifar10 data and saving the processed data in an hdf5 file.
 
