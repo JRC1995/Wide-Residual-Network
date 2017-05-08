@@ -27,3 +27,5 @@ But there are various factors that may contribute to the low accuracy:
 **Predict.ipynb:** This file is for restoring the saved model and using the model for making new predictions on any images in a specified directory. I tested the model by making it predict the class of several images downloaded through Google.
 
 **Predict-lite.ipynb:** Same as Predict.ipynb but with less downloaded pictures being tested. Try this file if Predict.ipynb takes too much time to load or open. 
+
+The **Model_Backup** folder contains files for the trained model which can be loaded for prediction or further training.
