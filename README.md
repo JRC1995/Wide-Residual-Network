@@ -16,7 +16,7 @@ But there are various factors that may contribute to the low accuracy:
 4) For preprocessing I only used global contrast normalization without ZCA whitening. I didn't use meanstd either. Different preprocessing
    steps may produce widely different results.
 5) No L2 regularization
-6) Certain hyperparameters might be better optimized.
+6) Certain hyperparameters might need to be further optimized. (I don't have too much experience in working with machine learning)
 
 File descriptions:
 
