@@ -5,7 +5,7 @@ The model was trained and tested on [cifar10 dataset](https://www.cs.toronto.edu
 
 Details on Wide Residual Network can be found [here](https://arxiv.org/abs/1605.07146) and [here](https://github.com/szagoruyko/wide-residual-networks)
 
-I trained a 16-layered WRN 3,3 type block (with dropout) with a widening factor of 4 and with batch size 120. Any L layered WRN 3,3 type block with K widening factor block can be constructed by simply changing the value of the variables 'layers' and 'K' in the code.
+I trained a 16-2 WRN 3,3 type block (with dropout) with batch size 120. Any L layered WRN 3,3 type block with K widening factor block can be constructed by simply changing the value of the variables 'layers' and 'K' in the code.
 
 I acheived an accuracy of about 90.15% which is quite low compared to the state of art performance an WRN is supposed to acheive
 But there are various factors that may contribute to the low accuracy:
@@ -13,10 +13,9 @@ But there are various factors that may contribute to the low accuracy:
 1) Due to various constraints I trained the model for relative few iterations (approximately 100 epochs only)
 2) Performance might be better on wider and deeper WRNs
 3) I implemented very light augmentations. (only horizontal flips)
-4) For preprocessing I only used global contrast normalization without ZCA whitening. I didn't use meanstd either. Different preprocessing
-   steps may produce widely different results.
+4) For preprocessing I only used global contrast normalization without ZCA whitening. I didn't use meanstd either. Different preprocessing steps may produce noticeably different results.
 5) No L2 regularization
-6) Certain hyperparameters might need to be further optimized. (I don't have too much experience in working with machine learning)
+6) Certain hyperparameters might need to be further optimized. 
 
 # File Descriptions:
 
