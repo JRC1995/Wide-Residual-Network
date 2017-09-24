@@ -10,7 +10,7 @@ I trained a 16-2 WRN 3,3 type block (with dropout) with batch size 120. Any L la
 I acheived an accuracy of about 90.15% which is quite low compared to the state of art performance an WRN is supposed to acheive
 But there are various factors that may contribute to the low accuracy:
 
-1) Due to various constraints I trained the model for relative few iterations (approximately 100 epochs only)
+1) Due to various circustantial issues, I could train the model for relative few iterations (approximately 100 epochs only)
 2) Performance might be better on wider and deeper WRNs
 3) I implemented very light augmentations. (only horizontal flips)
 4) For preprocessing I only used global contrast normalization without ZCA whitening. I didn't use meanstd either. Different preprocessing steps may produce noticeably different results.
