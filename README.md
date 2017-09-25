@@ -1,7 +1,6 @@
 # Wide-Residual-Network-Tensorflow
 
-This is an implementation of Wide Residual Network using [Tensorflow](https://www.tensorflow.org/) library. 
-The model was trained and tested on [cifar10 dataset](https://www.cs.toronto.edu/~kriz/cifar.html). The model was then used to make predictions on some images downloaded from Google.
+This is an implementation of Wide Residual Network using [Tensorflow](https://www.tensorflow.org/) library for object recognition. The model was trained and tested on [cifar10 dataset](https://www.cs.toronto.edu/~kriz/cifar.html). The model was then used to make predictions on some images downloaded from Google.
 
 Details on Wide Residual Network can be found [here](https://arxiv.org/abs/1605.07146) and [here](https://github.com/szagoruyko/wide-residual-networks)
 
@@ -12,9 +11,9 @@ There are various potential reasons for the low accuracy:
 
 1) Due to various circustantial issues, I could train the model for relative few iterations (approximately 100 epochs only)
 2) Performance might be better on wider and deeper WRNs
-3) I implemented very light augmentations. (only horizontal flips)
+3) I implemented very light augmentations (only horizontal flips). Cropping with mirror padding may be worth a try. 
 4) For preprocessing I only used global contrast normalization without ZCA whitening. I didn't use meanstd either. Different preprocessing steps may produce noticeably different results.
-5) No L2 regularization
+5) No L2 regularization. There seems to be some overfitting. 
 6) Certain hyperparameters may need to be further optimized. 
 
 # File Descriptions:
