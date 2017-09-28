@@ -14,7 +14,9 @@ There are various potential reasons for the low accuracy:
 3) I implemented very light augmentations (only horizontal flips). Cropping with mirror padding may be worth a try. 
 4) For preprocessing I only used global contrast normalization without ZCA whitening. I didn't use meanstd either. Different preprocessing steps may produce noticeably different results.
 5) No L2 regularization. There seems to be some overfitting. 
-6) Certain hyperparameters may need to be further optimized. 
+6) Certain hyperparameters may need to be further optimized.
+
+It may be wortthy to try this network out with [ELUs](https://arxiv.org/abs/1511.07289) (removing BN and ReLu).
 
 # File Descriptions:
 
