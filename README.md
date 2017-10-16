@@ -38,7 +38,7 @@ The **Model_Backup** folder contains files for the trained model which can be lo
 
 
 
-![png](Images\output_5_1.png)
+![png](/Images/output_5_1.png)
 
 
     
