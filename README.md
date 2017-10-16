@@ -2,7 +2,7 @@
 
 This is an implementation of Wide Residual Network using [Tensorflow](https://www.tensorflow.org/) library for image classification The model was trained and tested on [cifar10 dataset](https://www.cs.toronto.edu/~kriz/cifar.html). The model was then used to make predictions on some images downloaded from Google.
 
-Some sample Cifar10 training images (after some processing):
+Some sample <b>Cifar10</b> training images (after some processing):
 
 ![png](/Data_images/output_4_1.png)
 
@@ -21,6 +21,16 @@ There are various potential reasons for the low accuracy:
 6) Certain hyperparameters may need to be further optimized.
 
 It may be wortthy to try this network out with [ELUs](https://arxiv.org/abs/1511.07289) (removing BN and ReLu).
+
+## Variance of Accuracy and Loss during training
+
+
+![png](/Data_images/output_13_0.png)
+
+
+
+![png](/Data_images/output_13_1.png)
+
 
 # File Descriptions:
 
