@@ -11,6 +11,16 @@ Details on Wide Residual Network can be found [here](https://arxiv.org/abs/1605.
 I trained a 16-2 WRN 3,3 type block (with dropout) with batch size 120. Any L layered WRN 3,3 type block with K widening factor block can be constructed by simply changing the value of the variables 'layers' and 'K' in the code.
 
 I acheived an accuracy of about 90.15% which is quite low compared to the state of art performance an WRN is supposed to acheive.
+
+
+
+![png](/Data_images/output_13_0.png)
+
+
+
+![png](/Data_images/output_13_1.png)
+
+
 There are various potential reasons for the low accuracy:
 
 1) Due to various circustantial issues, I could train the model for relative few iterations (approximately 100 epochs only)
@@ -21,16 +31,6 @@ There are various potential reasons for the low accuracy:
 6) Certain hyperparameters may need to be further optimized.
 
 It may be wortthy to try this network out with [ELUs](https://arxiv.org/abs/1511.07289) (removing BN and ReLu).
-
-## Variance of Accuracy and Loss during training
-
-
-![png](/Data_images/output_13_0.png)
-
-
-
-![png](/Data_images/output_13_1.png)
-
 
 # File Descriptions:
 
@@ -48,29 +48,6 @@ The **Model_Backup** folder contains files for the trained model which can be lo
 
 Note: The followed Images are downloaded through google-images. I don't know the exact sources. I am not sure if there are any license\copyright issues associated with these images. 
 
-
-    Enter relative path to the image: aeroplane1.jpg
-
-
-
-![png](/Images/output_5_1.png)
-
-
-    
-    There's about a 100.000% chance that there is at least one airplane in the image
-    
-    The whole probability distribution:
-    
-    airplane: 100.000%
-    automobile: 0.000%
-    bird: 0.000%
-    cat: 0.000%
-    deer: 0.000%
-    dog: 0.000%
-    frog: 0.000%
-    horse: 0.000%
-    ship: 0.000%
-    truck: 0.000%
     
     Enter relative path to the image: cartoonaeroplane.png
 
@@ -122,71 +99,6 @@ Note: The followed Images are downloaded through google-images. I don't know the
 
 
 
-![png](/Images/output_5_7.png)
-
-
-    
-    There's about a 100.000% chance that there is at least one automobile in the image
-    
-    The whole probability distribution:
-    
-    airplane: 0.000%
-    automobile: 100.000%
-    bird: 0.000%
-    cat: 0.000%
-    deer: 0.000%
-    dog: 0.000%
-    frog: 0.000%
-    horse: 0.000%
-    ship: 0.000%
-    truck: 0.000%
-    
-    Enter relative path to the image: car3.jpg
-
-
-
-![png](/Images/output_5_9.png)
-
-
-    
-    There's about a 99.126% chance that there is at least one automobile in the image
-    
-    The whole probability distribution:
-    
-    airplane: 0.005%
-    automobile: 99.126%
-    bird: 0.000%
-    cat: 0.001%
-    deer: 0.000%
-    dog: 0.000%
-    frog: 0.002%
-    horse: 0.001%
-    ship: 0.003%
-    truck: 0.864%
-    
-    Enter relative path to the image: car4.jpg
-
-
-
-![png](/Images/output_5_11.png)
-
-
-    
-    There's about a 100.000% chance that there is at least one automobile in the image
-    
-    The whole probability distribution:
-    
-    airplane: 0.000%
-    automobile: 100.000%
-    bird: 0.000%
-    cat: 0.000%
-    deer: 0.000%
-    dog: 0.000%
-    frog: 0.000%
-    horse: 0.000%
-    ship: 0.000%
-    truck: 0.000%
-    
     Enter relative path to the image: bird1.jpg
 
 
@@ -348,51 +260,7 @@ Note: The followed Images are downloaded through google-images. I don't know the
     ship: 0.000%
     truck: 0.000%
     
-    Enter relative path to the image: deer2.jpg
-
-
-
-![png](/Images/output_5_27.png)
-
-
     
-    There's about a 72.604% chance that there is at least one bird in the image
-    
-    The whole probability distribution:
-    
-    airplane: 0.422%
-    automobile: 0.000%
-    bird: 72.604%
-    cat: 0.000%
-    deer: 25.153%
-    dog: 0.000%
-    frog: 1.821%
-    horse: 0.000%
-    ship: 0.000%
-    truck: 0.000%
-    
-    Enter relative path to the image: deer3.jpg
-
-
-
-![png](/Images/output_5_29.png)
-
-
-    
-    There's about a 99.965% chance that there is at least one deer in the image
-    
-    The whole probability distribution:
-    
-    airplane: 0.000%
-    automobile: 0.000%
-    bird: 0.034%
-    cat: 0.000%
-    deer: 99.965%
-    dog: 0.000%
-    frog: 0.000%
-    horse: 0.000%
-    ship: 0.000%
-    truck: 0.000%
     
     Enter relative path to the image: dog1.jpg
 
@@ -417,99 +285,8 @@ Note: The followed Images are downloaded through google-images. I don't know the
     ship: 0.000%
     truck: 0.000%
     
-    Enter relative path to the image: dog2.jpg
-
-
-
-![png](/Images/output_5_33.png)
-
-
-    
-    There's about a 100.000% chance that there is at least one dog in the image
-    
-    The whole probability distribution:
-    
-    airplane: 0.000%
-    automobile: 0.000%
-    bird: 0.000%
-    cat: 0.000%
-    deer: 0.000%
-    dog: 100.000%
-    frog: 0.000%
-    horse: 0.000%
-    ship: 0.000%
-    truck: 0.000%
-    
-    Enter relative path to the image: dog3.jpg
-
-
-
-![png](/Images/output_5_35.png)
-
-
-    
-    There's about a 99.999% chance that there is at least one dog in the image
-    
-    The whole probability distribution:
-    
-    airplane: 0.000%
-    automobile: 0.000%
-    bird: 0.000%
-    cat: 0.001%
-    deer: 0.000%
-    dog: 99.999%
-    frog: 0.000%
-    horse: 0.000%
-    ship: 0.000%
-    truck: 0.000%
     
     Enter relative path to the image: cartoondog.png
-
-
-
-![png](/Images/output_5_37.png)
-
-
-    
-    There's about a 57.800% chance that there is at least one dog in the image
-    
-    The whole probability distribution:
-    
-    airplane: 2.312%
-    automobile: 0.000%
-    bird: 14.730%
-    cat: 0.510%
-    deer: 14.800%
-    dog: 57.800%
-    frog: 0.317%
-    horse: 9.531%
-    ship: 0.000%
-    truck: 0.000%
-    
-    Enter relative path to the image: catdog1.jpg
-
-
-
-![png](/Images/output_5_39.png)
-
-
-    
-    There's about a 100.000% chance that there is at least one dog in the image
-    
-    The whole probability distribution:
-    
-    airplane: 0.000%
-    automobile: 0.000%
-    bird: 0.000%
-    cat: 0.000%
-    deer: 0.000%
-    dog: 100.000%
-    frog: 0.000%
-    horse: 0.000%
-    ship: 0.000%
-    truck: 0.000%
-    
-    Enter relative path to the image: catdog2.jpg
 
 
 
@@ -555,28 +332,6 @@ Note: The followed Images are downloaded through google-images. I don't know the
     ship: 0.000%
     truck: 0.000%
     
-    Enter relative path to the image: frog2.jpg
-
-
-
-![png](/Images/output_5_45.png)
-
-
-    
-    There's about a 100.000% chance that there is at least one frog in the image
-    
-    The whole probability distribution:
-    
-    airplane: 0.000%
-    automobile: 0.000%
-    bird: 0.000%
-    cat: 0.000%
-    deer: 0.000%
-    dog: 0.000%
-    frog: 100.000%
-    horse: 0.000%
-    ship: 0.000%
-    truck: 0.000%
     
     Enter relative path to the image: frog3.jpg
 
@@ -647,29 +402,6 @@ Note: The followed Images are downloaded through google-images. I don't know the
     ship: 0.000%
     truck: 5.159%
     
-    Enter relative path to the image: ship1.jpg
-
-
-
-![png](/Images/output_5_53.png)
-
-
-    
-    There's about a 99.971% chance that there is at least one airplane in the image
-    
-    The whole probability distribution:
-    
-    airplane: 99.971%
-    automobile: 0.000%
-    bird: 0.017%
-    cat: 0.001%
-    deer: 0.000%
-    dog: 0.002%
-    frog: 0.000%
-    horse: 0.001%
-    ship: 0.008%
-    truck: 0.000%
-    
     Enter relative path to the image: ship2.jpg
 
 
@@ -716,29 +448,6 @@ Note: The followed Images are downloaded through google-images. I don't know the
     ship: 100.000%
     truck: 0.000%
     
-    Enter relative path to the image: truck1.jpg
-
-
-
-![png](/Images/output_5_59.png)
-
-
-    
-    There's about a 96.710% chance that there is at least one airplane in the image
-    
-    The whole probability distribution:
-    
-    airplane: 96.710%
-    automobile: 0.000%
-    bird: 0.048%
-    cat: 0.044%
-    deer: 0.000%
-    dog: 0.000%
-    frog: 0.000%
-    horse: 0.021%
-    ship: 0.343%
-    truck: 2.833%
-    
     Enter relative path to the image: truck2.jpg
 
 
@@ -765,26 +474,6 @@ Note: The followed Images are downloaded through google-images. I don't know the
     Enter relative path to the image: truck3.jpg
 
 
-
-![png](/Images/output_5_63.png)
-
-
-    
-    There's about a 100.000% chance that there is at least one truck in the image
-    
-    The whole probability distribution:
-    
-    airplane: 0.000%
-    automobile: 0.000%
-    bird: 0.000%
-    cat: 0.000%
-    deer: 0.000%
-    dog: 0.000%
-    frog: 0.000%
-    horse: 0.000%
-    ship: 0.000%
-    truck: 100.000%
-    
     Enter relative path to the image: STOP
 
 
