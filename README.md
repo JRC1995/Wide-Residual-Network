@@ -4,7 +4,7 @@ This is an implementation of Wide Residual Network using [Tensorflow](https://ww
 
 Some sample Cifar10 training images (after some processing):
 
-![png](\Data_images\output_4_1.png)
+![png](/Data_images/output_4_1.png)
 
 Details on Wide Residual Network can be found [here](https://arxiv.org/abs/1605.07146) and [here](https://github.com/szagoruyko/wide-residual-networks)
 
