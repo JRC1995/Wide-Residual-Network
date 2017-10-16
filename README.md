@@ -2,6 +2,10 @@
 
 This is an implementation of Wide Residual Network using [Tensorflow](https://www.tensorflow.org/) library for image classification The model was trained and tested on [cifar10 dataset](https://www.cs.toronto.edu/~kriz/cifar.html). The model was then used to make predictions on some images downloaded from Google.
 
+Some sample Cifar10 training images (after some processing):
+
+![png](\Data_images\output_4_1.png)
+
 Details on Wide Residual Network can be found [here](https://arxiv.org/abs/1605.07146) and [here](https://github.com/szagoruyko/wide-residual-networks)
 
 I trained a 16-2 WRN 3,3 type block (with dropout) with batch size 120. Any L layered WRN 3,3 type block with K widening factor block can be constructed by simply changing the value of the variables 'layers' and 'K' in the code.
@@ -32,6 +36,7 @@ The **Model_Backup** folder contains files for the trained model which can be lo
 
 # Some example Predictions:
 
+Note: The followed Images are downloaded through google-images. I don't know the exact sources. I am not sure if there are any license\copyright issues associated with these images. 
 
 
     Enter relative path to the image: aeroplane1.jpg
