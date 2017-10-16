@@ -6,7 +6,8 @@ Some sample <b>Cifar10</b> training images (after some processing):
 
 ![png](/Data_images/output_4_1.png)
 
-The <b>Wide Residual Network</b> model is based on: https://arxiv.org/abs/1605.07146 
+The <b>Wide Residual Network</b> model is based on: https://arxiv.org/abs/1605.07146. 
+
 The official implementation can be found here: [here](https://github.com/szagoruyko/wide-residual-networks)
 
 I trained a 16-2 WRN 3,3 type block (with dropout) with batch size 120. Any L layered WRN 3,3 type block with K widening factor block can be constructed by simply changing the value of the variables 'layers' and 'K' in the code.
