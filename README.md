@@ -94,9 +94,6 @@ Note: The followed Images are downloaded through google-images. I don't know the
     horse: 0.000%
     ship: 0.000%
     truck: 2.945%
-    
-    Enter relative path to the image: car2.jpg
-
 
 
     Enter relative path to the image: bird1.jpg
@@ -145,51 +142,6 @@ Note: The followed Images are downloaded through google-images. I don't know the
     ship: 0.000%
     truck: 0.000%
     
-    Enter relative path to the image: bird3.jpg
-
-
-
-![png](/Images/output_5_17.png)
-
-
-    
-    There's about a 99.551% chance that there is at least one horse in the image
-    
-    The whole probability distribution:
-    
-    airplane: 0.001%
-    automobile: 0.000%
-    bird: 0.021%
-    cat: 0.002%
-    deer: 0.373%
-    dog: 0.053%
-    frog: 0.001%
-    horse: 99.551%
-    ship: 0.000%
-    truck: 0.000%
-    
-    Enter relative path to the image: cat1.jpg
-
-
-
-![png](/Images/output_5_19.png)
-
-
-    
-    There's about a 95.607% chance that there is at least one cat in the image
-    
-    The whole probability distribution:
-    
-    airplane: 0.000%
-    automobile: 0.000%
-    bird: 0.052%
-    cat: 95.607%
-    deer: 0.001%
-    dog: 4.319%
-    frog: 0.022%
-    horse: 0.000%
-    ship: 0.000%
-    truck: 0.000%
     
     Enter relative path to the image: cat2.jpeg
 
