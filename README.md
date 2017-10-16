@@ -14,7 +14,7 @@ I trained a 16-2 WRN 3,3 type block (with dropout) with batch size 120. Any L la
 
 I acheived an accuracy of about 90.15% which is quite low compared to the state of art performance an WRN is supposed to acheive.
 
-Here're are some graph that shows how the training went:
+Here're are some graphs that show how the training went:
 
 
 
