@@ -30,25 +30,52 @@ There are various potential reasons for the low accuracy:
 1) Due to various circustantial issues, I could train the model for relative few iterations (approximately 100 epochs only)
 2) Performance might be better on wider and deeper WRNs
 3) I implemented very light augmentations (only horizontal flips). Cropping with mirror padding may be worth a try. 
-4) For preprocessing I only used global contrast normalization without ZCA whitening. I didn't use meanstd either. Different preprocessing steps may produce noticeably different results.
+4) For preprocessing I only used global contrast normalization without ZCA whitening. Different preprocessing steps may produce noticeably different results.
 5) No L2 regularization. There seems to be some overfitting. 
 6) Certain hyperparameters may need to be further optimized.
 
-It may be wortthy to try this network out with [ELUs](https://arxiv.org/abs/1511.07289) (removing BN and ReLu).
+# UPDATE:
+
+I made a couple of changes - see Model(WRN)(NEW).ipynb, and DataProcessing(NEW).ipynb.
+
+* Included l2 regularization. 
+* Replaced GCN with meanstd preprocessing.
+* Image augmentation includes randomized 28x28 cropping and displacement of the cropped position over the original 32x32   
+  image. It creates a translation-like effect. Horizontal flips are still there. 
+* Improved the batching method.
+* Replaced ReLus with ELUs.
+* Added label smoothing. (https://arxiv.org/abs/1708.01729)
+
+However something might be missing. I had been unable to reach more than 92.x % in 16-8 WRN model. 
+
+# Experimental WRN + ResNeXt:
+
+The paper on ResNeXt (https://arxiv.org/abs/1611.05431) emphaszies the 'split-transform-merge' strategy (that is used in inception models), and suggested its inclusion in residual blocks. I added 4K cardinality (where K is the width - normally cardinality doesn't have to depend on K) to the updated WRN blocks. The convolution layer stack in a block is now splitted in 4K (the no. specified by cardinality separate parallel layers with reduced filter sizes, then the output of the parallely running stack of layers are merged along with the skip connection. 
+
+I also included ensembles. This model is untrained and untested. 
+
 
 # File Descriptions:
 
-**DataProcessing.ipynb:** This consists of the code for performing some basic preprocessing on the cifar10 data and saving the processed data in an hdf5 file.
+**DataProcessing(OLD).ipynb:** This consists of the code for performing some basic preprocessing on the cifar10 data and saving the processed data in an hdf5 file.
 
-**Model(WRN).ipynb:** This consists of the code for retreiving the processed data, functions for creating unbiased and augmented training batches during training at realtime, model definition and construction, training (along with checkpoints and model saving) and plots.
+**Model(WRN)(OLD).ipynb:** This consists of the code for retreiving the processed data, functions for creating unbiased and augmented training batches during training at realtime, model definition and construction, training (along with checkpoints and model saving) and plots.
+
+**DataProcessing(NEW).ipynb:** Updated version of DataProcessing(OLD) with different preprocessing steps. 
+
+**Model(WRN)(NEW).ipynb:** Updated version of Model(WRN)(OLD) with new features and changes.
+
+**WRN_ResNeXt(EXPERIMENTAL).ipynb:** Includes the aforementioned experimental model. 
 
 **Predict.ipynb:** This file is for restoring the saved model and using the model for making new predictions on any images in a specified directory. I tested the model by making it predict the class of several images downloaded through Google.
+(this is only for the old model)
 
 **Predict-lite.ipynb:** Same as Predict.ipynb but with less downloaded pictures being tested. Try this file if Predict.ipynb takes too much time to load or open. 
+(this is only for the old model)
 
 The **Model_Backup** folder contains files for the trained model which can be loaded for prediction or further training.
 
-# Some example Predictions:
+# Some example Predictions (of the old model):
 
 Note: The followed Images are downloaded through google-images. I don't know the exact sources. I am not sure if there are any license\copyright issues associated with these images. 
 
