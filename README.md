@@ -46,13 +46,15 @@ I made a couple of changes - see Model(WRN)(NEW).ipynb, and DataProcessing(NEW).
 * Replaced ReLus with ELUs.
 * Added label smoothing. (https://arxiv.org/abs/1708.01729)
 
-However something might be missing. I had been unable to reach more than 92.x % in 16-8 WRN model. 
+However, I still have been unable to reach more than 92.x % in 16-8 WRN model.
 
 # Experimental WRN + ResNeXt:
 
 The paper on ResNeXt (https://arxiv.org/abs/1611.05431) emphaszies the 'split-transform-merge' strategy (that is used in inception models), and suggested its inclusion in residual blocks. I added 4K cardinality (where K is the width - normally cardinality doesn't have to depend on K) to the updated WRN blocks. The convolution layer stack in a block is now splitted in 4K (the no. specified by cardinality separate parallel layers with reduced filter sizes, then the output of the parallely running stack of layers are merged along with the skip connection. 
 
 I also included ensembles. This model is untrained and untested. 
+
+(setting cardinality = 1, should turn it into an ordinary WRN)
 
 
 # File Descriptions:
