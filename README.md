@@ -50,11 +50,11 @@ However, I still have been unable to reach more than 92.x % in 16-8 WRN model.
 
 # Experimental WRN + ResNeXt:
 
-The paper on ResNeXt (https://arxiv.org/abs/1611.05431) emphaszies the 'split-transform-merge' strategy (that is used in inception models), and suggested its inclusion in residual blocks. I added 4K cardinality (where K is the width - normally cardinality doesn't have to depend on K) to the updated WRN blocks. The convolution layer stack in a block is now splitted in 4K (the no. specified by cardinality separate parallel layers with reduced filter sizes, then the output of the parallely running stack of layers are merged along with the skip connection. 
+The paper on ResNeXt (https://arxiv.org/abs/1611.05431) emphaszies the 'split-transform-merge' strategy (that is used in inception models), and suggested its inclusion in residual blocks. I added 4K cardinality (where K is the width - normally cardinality doesn't have to depend on K) to the updated WRN blocks. The convolution layer stack in a block is now splitted in 4K (the no. specified by cardinality) separate parallel layers with reduced filter sizes. Then the output of the parallel stack of layers are added. The result is then added with the standard skip connection.  
 
 I also included ensembles. This model is untrained and untested. 
 
-(setting cardinality = 1, should turn it into an ordinary WRN)
+(setting cardinality = 1 will turn it into an ordinary WRN)
 
 
 # File Descriptions:
@@ -76,6 +76,7 @@ I also included ensembles. This model is untrained and untested.
 (this is only for the old model)
 
 The **Model_Backup** folder contains files for the trained model which can be loaded for prediction or further training.
+(only for the old model)
 
 # Some example Predictions (of the old model):
 
