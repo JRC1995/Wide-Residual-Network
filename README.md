@@ -53,7 +53,7 @@ However, I still have been unable to reach more than 92.x % in 16-8 WRN model.
 
 # Experimental WRN + ResNeXt:
 
-The paper on ResNeXt (https://arxiv.org/abs/1611.05431) emphaszies the 'split-transform-merge' strategy (that is used in inception models), and suggested its inclusion in residual blocks. I added 4K cardinality (where K is the width - normally cardinality doesn't have to depend on K) to the updated WRN blocks. The convolution layer stack in a block is now splitted in 4K (the no. specified by cardinality) separate parallel layers with reduced filter sizes. Then the output of the parallel stack of layers are added. The result is then added with the standard skip connection.  
+The paper on ResNeXt (https://arxiv.org/abs/1611.05431) emphaszies the 'split-transform-merge' strategy (that is used in inception models), and suggested its inclusion in residual blocks. I created another model over the updated WRN model, where I added 4K cardinality (where K is the width - normally cardinality doesn't have to depend on K). The convolution layer stack in a block is now splitted in 4K (the no. specified by cardinality) separate parallel layers with reduced filter sizes. Then the output of the parallel stack of layers are added. The result is then added with the standard skip connection.  
 
 I also included ensembles. This model is untrained and untested. 
 
@@ -70,7 +70,7 @@ I also included ensembles. This model is untrained and untested.
 
 **Model(WRN)(NEW).ipynb:** Updated version of Model(WRN)(OLD) with new features and changes.
 
-**WRN_ResNeXt(EXPERIMENTAL).ipynb:** Includes the aforementioned experimental model. 
+**WRN_ResNeXt.ipynb:** Includes the aforementioned experimental WRN+ResNeXt model. 
 
 **Predict.ipynb:** This file is for restoring the saved model and using the model for making new predictions on any images in a specified directory. I tested the model by making it predict the class of several images downloaded through Google.
 (this is only for the old model)
