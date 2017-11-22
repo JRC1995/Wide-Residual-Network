@@ -10,7 +10,7 @@ The <b>Wide Residual Network</b> model is based on: https://arxiv.org/abs/1605.0
 
 The official implementation can be found: [here](https://github.com/szagoruyko/wide-residual-networks).
 
-I trained a 16-2 WRN 3,3 type block (with dropout) with batch size 120. Any L layered WRN 3,3 type block with K widening factor block can be constructed by simply changing the value of the variables 'layers' and 'K' in the code.
+I trained a 16-4 WRN 3,3 type block (with dropout) with batch size 120. Any L layered WRN 3,3 type block with K widening factor block can be constructed by simply changing the value of the variables 'layers' and 'K' in the code.
 
 I acheived an accuracy of about 90.15% which is quite low compared to the state of art performance an WRN is supposed to acheive.
 
@@ -59,18 +59,13 @@ I also included ensembles. This model is untrained and untested.
 
 (setting cardinality = 1 will turn it into an ordinary WRN)
 
+# Inside OLD 
 
-# File Descriptions:
+### File Descriptions:
 
 **DataProcessing(OLD).ipynb:** This consists of the code for performing some basic preprocessing on the cifar10 data and saving the processed data in an hdf5 file.
 
 **Model(WRN)(OLD).ipynb:** This consists of the code for retreiving the processed data, functions for creating unbiased and augmented training batches during training at realtime, model definition and construction, training (along with checkpoints and model saving) and plots.
-
-**DataProcessing(NEW).ipynb:** Updated version of DataProcessing(OLD) with different preprocessing steps. 
-
-**Model(WRN)(NEW).ipynb:** Updated version of Model(WRN)(OLD) with new features and changes.
-
-**WRN_ResNeXt.ipynb:** Includes the aforementioned experimental WRN+ResNeXt model. 
 
 **Predict.ipynb:** This file is for restoring the saved model and using the model for making new predictions on any images in a specified directory. I tested the model by making it predict the class of several images downloaded through Google.
 (this is only for the old model)
@@ -80,6 +75,17 @@ I also included ensembles. This model is untrained and untested.
 
 The **Model_Backup** folder contains files for the trained model which can be loaded for prediction or further training.
 (only for the old model)
+
+# Outside OLD 
+
+### File Descriptions:
+
+**DataProcessing(NEW).ipynb:** Updated version of DataProcessing(OLD) with different preprocessing steps. 
+
+**Model(WRN)(NEW).ipynb:** Updated version of Model(WRN)(OLD) with new features and changes.
+
+**WRN_ResNeXt.ipynb:** Includes the aforementioned experimental WRN+ResNeXt model. 
+
 
 # Some example Predictions (of the old model):
 
