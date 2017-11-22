@@ -10,6 +10,9 @@ The <b>Wide Residual Network</b> model is based on: https://arxiv.org/abs/1605.0
 
 The official implementation can be found: [here](https://github.com/szagoruyko/wide-residual-networks).
 
+# Description of old Model:
+(see inside OLD foler)
+
 I trained a 16-4 WRN 3,3 type block (with dropout) with batch size 120. Any L layered WRN 3,3 type block with K widening factor block can be constructed by simply changing the value of the variables 'layers' and 'K' in the code.
 
 I acheived an accuracy of about 90.15% which is quite low compared to the state of art performance an WRN is supposed to acheive.
@@ -34,9 +37,9 @@ There are various potential reasons for the low accuracy:
 5) No L2 regularization. There seems to be some overfitting. 
 6) Certain hyperparameters may need to be further optimized.
 
-# UPDATE:
+# Description of the newer Model 
 
-I made a couple of changes - see Model(WRN)(NEW).ipynb, and DataProcessing(NEW).ipynb.
+I made a couple of changes over the older model - see Model(WRN)(NEW).ipynb, and DataProcessing(NEW).ipynb.
 
 * Included l2 regularization. 
 * Replaced GCN with meanstd preprocessing.
