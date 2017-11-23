@@ -58,7 +58,7 @@ However, I still have been unable to reach more than 92.x % in 16-8 WRN model.
 
 # Experimental WRN + ResNeXt:
 
-The paper on ResNeXt [["Aggregated Residual Transformations for Deep Neural Networks"- Saining Xie, Ross Girshick, Piotr Dollár, Zhuowen Tu, Kaiming He arXiv:1611.05431](https://arxiv.org/abs/1611.05431)] emphaszies the 'split-transform-merge' strategy (that is used in inception models), and suggested its inclusion in residual blocks. I created another model over the updated WRN model, where I added 4K cardinality (where K is the width - normally cardinality doesn't have to depend on K). The convolution layer stack in a block is now splitted in 4K (the no. specified by cardinality) separate parallel layers with reduced filter sizes. Then the output of the parallel stack of layers are added. The result is then added with the standard skip connection.  
+The paper on ResNeXt (["Aggregated Residual Transformations for Deep Neural Networks"- Saining Xie, Ross Girshick, Piotr Dollár, Zhuowen Tu, Kaiming He arXiv:1611.05431](https://arxiv.org/abs/1611.05431)) emphaszies the 'split-transform-merge' strategy (that is used in inception models), and suggested its inclusion in residual blocks. I created another model over the updated WRN model, where I added 4K cardinality (where K is the width - normally cardinality doesn't have to depend on K). The convolution layer stack in a block is now splitted in 4K (the no. specified by cardinality) separate parallel layers with reduced filter sizes. Then the output of the parallel stack of layers are added. The result is then added with the standard skip connection.  
 
 I also included ensembles. This model is untrained and untested. 
 
