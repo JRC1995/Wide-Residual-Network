@@ -64,6 +64,8 @@ I also included ensembles. This model is untrained and untested.
 
 (setting cardinality = 1 will turn it into an ordinary WRN)
 
+I didn't extensively tested it. Cardinality makes the model heavy. I have made a naive implementation such that the 'branches' of convolutional layers are processed sequentially. That increases the time taken for training. In a distributed set up, with some parallel computing, cardinality shouln't be any issue. 
+
 # Inside OLD 
 
 ### File Descriptions:
