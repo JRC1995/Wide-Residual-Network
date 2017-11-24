@@ -13,7 +13,7 @@ The <b>Wide Residual Network</b> model is based on:
 The official implementation can be found: [here](https://github.com/szagoruyko/wide-residual-networks).
 
 # Description of old Model:
-(see inside OLD foler)
+(see inside OLD folder)
 
 I trained a 16-4 WRN 3,3 type block (with dropout) with batch size 120. Any L layered WRN 3,3 type block with K widening factor block can be constructed by simply changing the value of the variables 'layers' and 'K' in the code.
 
