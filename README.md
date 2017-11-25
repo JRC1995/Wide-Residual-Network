@@ -44,16 +44,32 @@ There are various potential reasons for the low accuracy:
 I made a couple of changes over the older model - see Model(WRN)(NEW).ipynb, and DataProcessing(NEW).ipynb.
 
 * Included l2 regularization. 
-* Replaced GCN with meanstd preprocessing.
+* Replaced GCN (Global Contrast Normalization) with meanstd preprocessing.
 * Image augmentation includes randomized 28x28 cropping and displacement of the cropped position over the original 32x32   
   image. It creates a translation-like effect. Horizontal flips are still there. 
 * Improved the batching method.
 * Replaced ReLus with ELUs.
 * Added label smoothing. (https://arxiv.org/abs/1708.01729)
 
-However, I still have been unable to reach more than 92.x % in 16-8 WRN model.
+However, I still have been unable to reach more than **92.x %** in 16-8 WRN model.
+I think I reached 92.7% with some hyperparameters. 
 
-(Interesting: https://www.reddit.com/r/MachineLearning/comments/7dtrfl/d_how_do_you_get_high_performance_with_resnet/)
+Note: I am using the same samples for testing and validation - which should be a sin. My poor results even after biasing the hypothesis towards test set, makes it all the more emberassing. 
+
+
+
+Potential improvements:
+
+* Initialize all biases with zeros. 
+* First just try to replicate the result with ReLus (which were originally used)
+* Xavier initialization for weights.
+
+Or may be try with PyTorch?
+
+From: https://www.reddit.com/r/MachineLearning/comments/7dtrfl/d_how_do_you_get_high_performance_with_resnet/
+
+>Use pytorch or torch. Senet is a really easy variant that works well
+I noticed that most paper submitted to ICLR reporting really low accuracy on cifar10/cifar100 were using a tensorflow implementation. Either something wrong in the iterator or some strange default init I think.
 
 
 # Experimental WRN + ResNeXt:
